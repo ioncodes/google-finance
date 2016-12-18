@@ -9,8 +9,8 @@ http://pub.ioncodes.com:3000?from=BTC&to=USD&amount=2
 
 ## npm
 Install via npm:
-´´´
+```
 npm install google-finance-api
-´´´
+```
 
 Link: https://www.npmjs.com/package/google-finance-api
