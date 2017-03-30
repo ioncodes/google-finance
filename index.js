@@ -1,16 +1,20 @@
 var express = require('express')
 var app = express()
 
-app.get('/', function (req, res) {
+app.get('/:from/:to/:amount', function (req, res) {
     var json = {'result':'error','currency':'0','amount':'0','reason':''}
 
     var from
     var to
     var amount
 
-    from = req.query['from']
-    to = req.query['to']
-    amount = req.query['amount']
+    // from = req.query['from']
+    // to = req.query['to']
+    // amount = req.query['amount']
+
+    from = req.params.from;
+    to = req.params.to;
+    amount = req.params.amount;
 
     if(from === 'undefined' || to === 'undefined' || amount === 'undefined') {
         json.result = 'error'
